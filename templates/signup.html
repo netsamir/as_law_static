@@ -1,0 +1,262 @@
+{% extends 'base.html' %}
+
+{% block script %}
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyA3bO8PKIvpJ-Js_hdMw8RMricy_v5SppA&sensor=false"</script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3&sensor=false"></script>
+<script>
+function initialize() {
+    var mapOptions = {
+    zoom: 15,
+    center: new google.maps.LatLng(50.803242, 4.388517),
+    };
+
+    var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    var marker = new google.maps.Marker({
+      position: new google.maps.LatLng(50.803242, 4.388517),
+    });
+    marker.setMap(map);
+};
+
+
+$('#myModal').on('shown.bs.modal', function() {
+   initialize();
+});
+
+</script>
+{% endblock %}
+
+
+{% block jumbotron %}
+   <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <div class='col-sm-6'>
+        <h1>Amira Sadek</h1>
+	<h2>Avocate au Barreau de Bruxelles</h2>
+        <!--<p>A l’écoute et sensibles à votre situation, nous vous garantissons une analyse rigoureuse de votre dossier et un avis objectif quant à vos chances de succès.</p>-->
+        <!--  <p><a class="btn btn-primary btn-lg" href='{% url "aboutus" %}' role="button">En savoir plus &raquo;</a></p>-->
+        </div>
+        <div class='col-sm-6'>
+           <p><img  src='{{ STATIC_URL }}/img/Franklin.jpg' class='img-responsive' /></p>
+        </div>
+      </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+        <div class="row">
+          <h2>Droit des entreprises en difficulté et faillites</h2>
+          <div class="description">
+<p>Nous assistons et conseillons les dirigeants d’entreprises en difficulté/ou commerçants afin de leur permettre de rétablir l’équilibre financier et assurer la continuité de leurs affaires, par le biais notamment de la procédure en réorganisation judiciaire.  </p>
+<p> En cas de faillite, nous vous accompagnons dans cette étape difficile et assurons un suivi efficace de votre dossier auprès du curateur et du Tribunal de Commerce.</p>
+        </div>
+          <!--<p><a class="btn btn-default" href="#" role="button">En savoir plus &raquo;</a></p>-->
+       </div>
+        <div class="row">
+          <h2>Droit des étrangers</h2>
+          <div class="description">
+              <p>Cette matière complexe est <u>principalement</u>, mais pas exclusivement,
+              régie par la loi du 15 décembre 1980 sur l’accès au territoire, le séjour,
+              l’établissement et l’éloignement des étrangers, ainsi que par l’arrêté royal du 8 octobre 1981.
+              Cette matière étant dans une large proportion communautarisée, elle trouve également de nombreuses
+              sources dans les règlements et directives européennes.</p>
+
+              <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                      Vous souhaitez introduire une demande de visa court
+                      séjour (visa de type C)
+                  </h3>
+                              </div>
+                                <div class="panel-body">
+
+              <p> Dans le cadre d’une visite familiale, d’un séjour touristique ou
+              encore d’un voyage d’affaires?</p>
+
+              <p>Nous assurons la préparation de votre dossier afin d’optimiser
+              les chances d’acceptation de celui-ci.</p>
+
+              <p>En cas de rejet de votre demande, nous introduisons les voies
+              recours et assurons votre représentation devant l’autorité
+              compétente, à savoir, le Conseil du Contentieux des Etrangers.</p>
+                    </div>
+                                      </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Vous souhaitez séjourner plus longuement en Belgique
+                        (généralement visa de type D) :
+                    </h3>
+                            </div>
+                            <div class="panel-body">
+
+                                <ul>
+              <li >dans le cadre du regroupement familial ;</li>
+              <li >pour venir faire des études/ou en tant que chercheur auprès
+              d’un organisme de recherche agréé ; </li>
+              <li >pour exercer une activité salariée dans le cadre d’un
+              contrat de travail/ou pour exercer une activité en qualité
+              d’indépendant (carte professionnelle) ;</li>
+              <li >vous devez quitter votre pays pour des raisons de sécurité
+              et recherchez la protection de la Belgique (demande
+              d’asile/protection subsidiaire) ;</li>
+              <li >vous souffrez d'une maladie qui entraîne un risque réel
+              pour votre vie ou votre intégrité physique et il n'existe aucun
+              traitement adéquat dans votre pays d'origine ;  </li>
+              <li >vous vous trouvez déjà en Belgique et souhaitez régulariser
+              votre situation en raison de votre ancrage local durable sur le
+              sol belge; </li>
+          </ul>
+              <p> Dans tous ces cas décrits ci-dessus, nous préparons votre dossier
+              et assurons votre représentation devant les autorités chargées
+              d’examiner votre demande d’autorisation de séjour (ou de permis
+              de travail/carte professionnelle) : Office des Etrangers,
+              Commissariat Général aux Réfugiés et Apatrides, les Régions
+              (Wallonnes, Flamande et Bruxelles-Capital). </p>
+
+              <p>Nous introduisons également les voies de recours en cas de rejet
+              de votre demande, devant l’autorité compétente, dans la plupart
+              des cas, il s’agit du Conseil du Contentieux des Etrangers.
+              </p>
+              
+                                          </div>
+                                      </div>
+
+
+              <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+
+                    Vous avez reçu un ordre de quitter le territoire et/ou une interdiction d’entrée ou êtes
+                  actuellement retenu dans un centre fermé pour étrangers
+                  illégaux :
+                       </h3>
+                              </div>
+                                <div class="panel-body">
+             <p>
+              Nous mettons tous nos efforts en jeu pour tenter de vous sortir
+              de cette situation malheureuse (recours en extrême urgence devant
+              le Conseil du Contentieux des Etrangers et/ou requête de remise
+              en liberté devant la Chambre du Conseil) et nous vous encadrons
+              dans ce moment difficile.
+              </p>
+                      </div>
+                                      </div>
+
+              <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+
+              Vous souhaitez acquérir la nationalité Belge ?
+                                     </h3>
+                              </div>
+                                <div class="panel-body">
+
+
+              <p>Nous examinons votre situation au regard du Code de la
+              Nationalité Belge et, si vous entrez dans les conditions légales,
+              nous préparons votre dossier afin d’optimiser les chances
+              d’acceptation de celui-ci.  </p>
+  </div>
+                                      </div>
+
+
+
+        </div>
+         <!-- <p><a class="btn btn-default" href="#" role="button">En savoir plus &raquo;</a></p>-->
+       </div>
+
+        <div class="row">
+       <h2>Droit civil et commercial </h2>
+       <p>Nous assurons également la représentation de vos intérêts en matière civile et commerciale et entreprenons efficacement toute procédure que vous souhaiteriez engager à l’égard d’un tiers en vue de préserver vos droits.</p>
+</div>
+        <div class="row">
+       <h2>Avocat</h2>
+<p><img  src='{{ STATIC_URL }}/img/amira_sadek.jpg' class='img-responsive' height="135" width="135" /></p>
+<p>Amira SADEK est avocate au Barreau de Bruxelles depuis 2009.</p>
+<p>Elle est titulaire d’un Master Complémentaire en droit économique de l’Université Libre de Bruxelles (2007-2008) et licenciée en droit de l’Université Catholique de Louvain (2000-2005).</p>
+<!--<p>Langues parlées : Français - anglais </p> -->
+</div>
+        <div class="row">
+          <h2>Contact</h2>
+          <div class="description">
+          <!--<p>Pour un traitement efficace et rapide de votre dossier, vous avez également la possibilité, en ligne d’obtenir un avis écrit, de consulter votre dossier et de télécharger des documents.</p>        -->
+          <address>
+            <strong>Maître Amira SADEK</strong><br>
+            Avenue Franklin Roosevelt, 186 bte 1<br>
+            1050 - Bruxelles   <button type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#myModal">
+              <span class="glyphicon glyphicon-map-marker"></span>
+            </button><br>
+            <abbr title="Mobile">Mob.</abbr> +32 486 904 097 <br>
+            <abbr title="Phone">Tél.</abbr> +32 2 672 27 02 <br>
+            <abbr title="Fax">Fax</abbr> +32 2 672 26 36<br>
+            <a href="mailto:amira.sadek@as-law.be">amira.sadek@as-law.be</a><br>
+          </address>
+          </div>
+         <!-- <p><a class="btn btn-default" href="#" role="button">En savoir plus &raquo;</a></p> -->
+        </div>
+<!--
+        <div class="row">
+      <h2>Honoraires</h2>
+<p>Les honoraires rémunèrent les prestations effectuées par le cabinet lesquelles prestations sont constituées de : consultations, entretiens téléphoniques, réunions, expertises, étude du dossier, recherches, préparation de notes d’audience, requêtes, citations, conclusions et autres actes de procédure, comparutions aux audiences pour les remises, mise en état, jugement par défaut ou plaidoiries, dépôt des conclusions au greffe, échanges de courriers, etc.</p>
+
+<p>Ces honoraires sont portés en compte au taux horaire de base de 125 € + TVA (sous réserve d’une majoration, en concertation préalable avec le client, en cas de demande d’intervention urgente ou pour des prestations considérées comme exceptionnelles).</p>
+<p>La première consultation est fixée au prix forfaitaire de 70 € (TVAC) et comprend un récapitulatif écrit des points évoqués lors de la consultation qui sera envoyé par email.</p>
+
+<h3>Le forfait</h3>
+<p>Pour certains dossiers simples, comportant peu d’aléas, le cabinet peut convenir au préalable avec le client d’un honoraire forfaitaire avec un minimum  de 450 € + TVA, pour le traitement du dossier.</p>
+
+<h3>La convention d’abonnement</h3>
+<p>Si vous confiez au cabinet un volume important et régulier de dossiers,  il peut être convenu de conditions particulières de calcul d’honoraires pour un nombre garanti d’heures ou de dossiers (ex. 200 €/mois, 250 €/mois, 300 €/mois… + TVA).</p>
+
+
+<h3>Le « success fee » </h3>
+<p>Il peut être convenu préalablement avec le client, que les honoraires calculés selon l’une des méthodes exposées, seront majorés d’un taux maximal de 7 % des montants récupérés en principal et intérêts, et ce en fonction notamment de la nature de l’affaire et du résultat obtenu.</p>
+
+</div>
+
+<div class="row">
+<h2>Frais</h2>
+<h3>Débours</h3>
+<p>Les frais de justice et les frais extérieurs au cabinet (huissiers de justice, droits de rôle, frais de traduction, d’expert, envoi recommandé, ….) sont payables par le client et lui seront répercutés tels que facturés au cabinet.</p>
+
+<h3>Frais administratifs</h3>
+<p>Ouverture dossier : 65 €</p>
+<p>Frais secrétariat : seront facturés à la clôture du dossier, selon un forfait de 15 % sur le total des honoraires. Ces frais comprennent : photocopies, papiers, correspondances, e-mails, timbres, fax envoyés, communications téléphoniques nationales,…)</p>
+<p>Déplacements hors juridiction bruxelloise à 0,45 € le km</p>
+</div>
+
+<div class="row">
+<h2>Demande de provisions à valoir sur l’état final</h2>
+<p>Ces demandes seront adressées en cours de gestion du dossier sans que ces états provisionnels ne soient nécessairement représentatifs de l’état d’avancement des devoirs ni de la hauteur des frais et des débours exposés au jour de leur émission.</p>
+</div>  -->
+       <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 class="modal-title" id="myModalLabel">Avenue Franklin Roosevelt, 186 bte 1 <br> 1050 - Bruxelles</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                   <div id="map-canvas"/>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+         <!-- <div class="col-md-3">
+        <h2>Nous vous contactons:</h2>
+            <form method='POST' action=''> {% csrf_token %}
+            {{ form.as_p }}
+            <input type='submit' class='btn btn-success btn-block' value="Enregistrez-vous">
+            </form>
+        </div> -->
+{% endblock %}
+
